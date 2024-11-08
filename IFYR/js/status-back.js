@@ -73,9 +73,10 @@ const successEmails = [
   "fareedsaid10@gmail.com",
   "didiaperaltaz@gmail.com",
   "nigeltakundachirambaguwa@gmail.com",
-  "eyad6ashraf@gmail.com"
+  "momen.ashraf442006@gmail.com"
 ];
 const FailEmails =[
+    "eyad6ashraf@gmail.com",
     "ahlam.2323502@stemqena.moe.edu.eg",
     "abdallah.1023093@stemoctober.moe.edu.eg",
     "abdallah1khafaga2008@gmail.com",
