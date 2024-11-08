@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/status.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />    <title>IFYR</title>
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+  <div class="box" id="box"></div>
+  <section id="submitted-popup">
+    
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-check"></i>
+      <h2>Portal Submitted Successfully!</h2>
+      <h3>Your portal have been submitted now go check your status</h3>
+
+      <div class="buttons">
+        <a href="Status?tab=status">
+        <button>Go to status</button>
+        </a>
+      </div>
+    </div>
+  </section>
+<section id="failed-popup">
+  <span class="overlay"></span>
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-xmark"></i>
+      <h2 id="failed-msg"></h2>
+      <div class="buttons">
+        <button id="close-btn">ok, close</button>
+      </div>
+    </div>
+  </section>
+  <div class="status-update">
+    <div class="update-wrapper">
+      <header>
+        <h2>Decission:</h2>
+        <button id="close-update"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <p id="decision-email"></p>
+    </div>
+  </div>
+  <header class="head">
+    <div class="logos">
+        <img src="imgs/YSJ-logo.png" class="ysj-logo" alt="">
+        <div class="logo">
+            <img src="imgs/IFYR-logo.jpg" class="ifyr-logo" alt="">
+        <p>THE International Fair of <br>
+            Youth Researchers <br>
+            <span>Powered by ysj</p>
+        </div>
+    </div>
+    <h1>Application Portal</h1>
+</header>
+    <div class="controls">
+        <h2><span id="welcome-team"></span> | THE INTERNATIONAL FAIR OF YOUTH RESEARCHERS <br>
+            2025 SEASON</h2>
+        <button class="signout" id="signout">Sign out</button>
+    </div>
+    <div class="red-row">
+        <a href="Status?tab=status" class="active" id="status-tab">Status</a>
+        <a href="Status?tab=announcments"  id="announcments-tab">Announcments</a>
+    </div>
+    <div class="container">
+        <div class="status" id="status-content">
+            <div class="big">
+              <h2>Status Updates</h2>
+              <p>A status update was posted on <strong>11/8/2024</strong></p>
+              <button id="open-update">View update</button>
+            </div>
+            <div class="smalls">
+              <div class="first-small">
+                <h2 style="margin-bottom: 15px;">Checklist</h2>
+                <div class="checkbox-wrapper-46">
+                  <input type="checkbox" class="inp-cbx" checked disabled/>
+                  <label for="registeration" class="cbx"
+                    ><span>
+                      <svg viewBox="0 0 12 10" height="10px" width="12px">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                    ><span>Registeration</span>
+                  </label>
+                </div>                
+                <div class="checkbox-wrapper-46">
+                  <input type="checkbox" class="inp-cbx" checked disabled/>
+                  <label for="round-1" class="cbx"
+                    ><span>
+                      <svg viewBox="0 0 12 10" height="10px" width="12px">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                    ><span>Round 1</span>
+                  </label>
+                </div>
+                <div class="checkbox-wrapper-46">
+                  <input type="checkbox" class="inp-cbx" disabled />
+                  <label for="round-2" class="cbx"
+                    ><span>
+                      <svg viewBox="0 0 12 10" height="10px" width="12px">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                    ><span>Round 2</span>
+                  </label>
+                </div>
+              </div>
+              <div class="second-small">
+                <h2>Adimtion Status</h2>
+                <p>Your Application is submitted on <span id="status-date"></span> and reviewed on <strong>11/8/2024</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="content" id="announcments-content">
+            <h2>No announcments yet!</h2>
+          </div>
+          
+          
+        </div>
+        
+    <footer>
+        <h2>If you encounter any problems, please contact US</h2>
+        <div class="contact-icons">
+            <a href="mailto:competition@ys-journal.org">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>competition@ys-journal.org</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script src="js/status.js"></script>
+    <script type="module" src="js/status-back.js"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../images/favicon/site.webmanifest" />
+        <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#d32424">
+    <title>IFYR | Your App</title>
+</head>
+<body>
+    
+    <section id="submitted-popup">
+    
+          <div class="modal-box">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Portal Submitted Successfully!</h2>
+            <h3>Your portal have been submitted now go check your status</h3>
+    
+            <div class="buttons">
+              <a href="Status?tab=status">
+              <button>Go to status</button>
+              </a>
+            </div>
+          </div>
+        </section>
+    <section id="failed-popup">
+        <span class="overlay"></span>
+          <div class="modal-box">
+            <i class="fa-regular fa-circle-xmark"></i>
+            <h2 id="failed-msg"></h2>
+            <div class="buttons">
+              <button id="close-btn">ok, close</button>
+            </div>
+          </div>
+        </section>
+    <header>
+        <div class="logos">
+            <img src="imgs/YSJ-logo.png" class="ysj-logo" alt="">
+            <div class="logo">
+                <img src="imgs/IFYR-logo.jpg" class="ifyr-logo" alt="">
+            <p>THE International Fair of <br>
+                Youth Researchers <br>
+                <span>Powered by ysj</p>
+            </div>
+        </div>
+        <h1>Application Portal</h1>
+    </header>
+    <div class="controls">
+        <h2><span id="app-team-name"></span> | THE INTERNATIONAL FAIR OF YOUTH RESEARCHERS <br>
+            2024 SEASON</h2>
+        <button id="signout">SIGN OUT</button>
+    </div>
+
+    <div class="container">
+        
+        <form class="content" id="app-content" >
+            <div class="input-group">
+                <h3>Team <br> Information</h3>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="team-name">Team Name</label>
+                        <input type="text" placeholder="Team Name" id="team-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="team-size">Team Size</label>
+                        <select placeholder="Team Size" id="team-size" disabled>
+                            <option value="solo">Solo (1)</option>
+                            <option value="due">Due (2)</option>
+                            <option value="trio">Trio (3)</option>
+                            <option value="squad">Squad (4)</option>
+                            <option value="quintet">Quintet (5)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>Members <br> Information</h3>
+                <div class="input-fields">
+                    <h4>Leader Information</h4>
+                    <div class="input-field">
+                        <label for="member1-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member1-first-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member1-last-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-email-address">Email Address</label>
+                        <input type="email" placeholder="Email Address" id="member1-email-address" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member1-birthday" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-country">Country</label>
+                        <input type="text" placeholder="Country" id="member1-country" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member1-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member1-institution" disabled>
+                    </div>
+                    <div id="member2">
+                        <h4>Member 2 Information</h4>
+                    <div class="input-field">
+                        <label for="member2-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member2-first-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member2-last-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-email-address">Email Address</label>
+                        <input type="email" placeholder="Email Address" id="member2-email-address" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member2-birthday" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-country">Country</label>
+                        <input type="text" placeholder="Country" id="member2-country" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member2-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member2-institution" disabled>
+                    </div>
+                    </div>
+                    <div id="member3">
+                        <h4>Member 3 Information</h4>
+                    <div class="input-field">
+                        <label for="member3-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member3-first-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member3-last-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-email-address">Email Address</label>
+                        <input type="email" placeholder="Email Address" id="member3-email-address" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member3-birthday" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-country">Country</label>
+                        <input type="text" placeholder="Country" id="member3-country" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member3-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member3-institution" disabled>
+                    </div>
+                    </div>
+                    <div id="member4">
+                        <h4>Member 4 Information</h4>
+                    <div class="input-field">
+                        <label for="member4-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member4-first-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member4-last-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-email-address">Email Address</label>
+                        <input type="email" placeholder="Email Address" id="member4-email-address" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member4-birthday" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-country">Country</label>
+                        <input type="text" placeholder="Country" id="member4-country" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member4-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member4-institution" disabled>
+                    </div>
+                    </div>
+                    <div id="member5">
+                        <h4>Member 5 Information</h4>
+                    <div class="input-field">
+                        <label for="member5-first-name">First Name</label>
+                        <input type="text" placeholder="First Name" id="member5-first-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" id="member5-last-name" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-email-address">Email Address</label>
+                        <input type="email" placeholder="Email Address" id="member5-email-address" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-birthday">Birthday</label>
+                        <input type="date" placeholder="Birthday" id="member5-birthday" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-country">Country</label>
+                        <input type="text" placeholder="Country" id="member5-country" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="member5-institution">Institution</label>
+                        <input type="text" placeholder="Institution" id="member5-institution" disabled>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>Paper <br> Information</h3>
+                <div class="input-fields">
+                    <div class="input-field">
+                        <label for="paper-title">Paper Title</label>
+                        <input type="text" placeholder="Paper Title" id="paper-title">
+                    </div>
+                    <label for="radio-input" class="radio-label">Paper Category</label>
+                    <div class="radio-input" id="radio-input">
+                        <label class="label">
+                          <input type="radio" id="research-paper" checked name="paper-category" value="Research Paper" disabled>
+                          <p class="text">Research Paper</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="review-paper" name="paper-category" value="Review Paper" disabled>
+                          <p class="text">Review Paper</p>
+                        </label>
+                        <label class="label">
+                          <input type="radio" id="meta-analysis" name="paper-category" value="MetaAnalysis" disabled>
+                          <p class="text">Meta Analysis</p>
+                        </label>
+                        <label class="label">
+                            <input type="radio" id="survey" name="paper-category" value="Survey" disabled>
+                            <p class="text">Survey</p>
+                        </label>
+                        <label class="label">
+                            <input type="radio" id="speculative" name="paper-category" value="Speculative" disabled>
+                            <p class="text">Speculative</p>
+                        </label>
+                        <label class="label">
+                            <input type="radio" id="other" name="paper-category" value="other" disabled>
+                            <p class="text">Other</p>
+                        </label>
+                      </div>
+                      <label for="radio-input" class="radio-label">Paper Field</label>
+                      <div class="radio-input" id="radio-input">
+                          <label class="label">
+                            <input type="radio" id="Physics-Engineering" name="paper-field" value="Behavioral and Social Sciences" disabled>
+                            <p class="text">Physics & Engineering</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Chemistry" name="paper-field" value="Chemistry" disabled>
+                            <p class="text">Chemistry</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Biology" name="paper-field" value="Biology" disabled>
+                            <p class="text">Biology</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Mathematics" name="paper-field" value="Mathematics" disabled>
+                            <p class="text">Mathematics</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Astronomy-Astrophysics" name="paper-field" value="Astronomy & Astrophysics" disabled>
+                            <p class="text">Astronomy & Astrophysics</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Neuroscience-Psychology" name="paper-field" value="Neuroscience & Psychology" disabled>
+                            <p class="text">Neuroscience & Psychology</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Social-sciences" name="paper-field" value="Social sciences" disabled>
+                            <p class="text">Social sciences</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Business" name="paper-field" value="Business" disabled>
+                            <p class="text">Business</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Environmental-sciences" name="paper-field" value="Environmental sciences" disabled>
+                            <p class="text">Environmental sciences</p>
+                          </label>
+                          <label class="label">
+                            <input type="radio" id="Computer-Science" name="paper-field" value="Computer Science" disabled>
+                            <p class="text">Computer Science</p>
+                          </label>
+                        </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <h3>paper <br> upload</h3>
+                <div class="input-fields">
+                    
+                    <div id="paper-upload-content">
+                        <div class="file-container" id="file-container">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Click here to upload the paper<br><span>File Formats: docs, docx, pdf, html</span>
+                            </p>
+                            <input type="file" id="real-file" style="display: none;">
+                          </div>
+                          <label class="radio-label">Uploaded Paper</label>
+                          <div class="file-data">
+                            <p id="file-name">No file uploaded </p>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="input-group">
+                <h3>App <br> managment</h3>
+                <div class="input-fields">
+                    <div class="buttons">
+                
+                      <button id="send-paper">SEND PAPER</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    <footer>
+        <h2>If you encounter any problems, please contact US</h2>
+        <div class="contact-icons">
+            <a href="mailto:competition@ys-journal.org">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>competition@ys-journal.org</p>
+                </div>
+            </a>
+        </div>
+    </footer>
+   <script type="module" src="js/answers.js"></script>
+</body>
+</html>
